@@ -24,7 +24,8 @@ from fk.views import Fk
 from fkip.views import Fkip
 from ft.views import Ft
 from pascasarjana.views import Pascasarjana
-
+from profil.views import Profil
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,5 +37,6 @@ urlpatterns = [
     path('fkip/', Fkip, name="fkip"),
     path('ft/', Ft, name="ft"),
     path('pascasarjana/', Pascasarjana, name="pascasarjana"),
-
+    path('profil/', Profil, name="profil"),
+    path('', views.index),
 ]
